@@ -58,18 +58,38 @@ $(".card .list-group").sortable({
   //triggers when drag starts
   activate: function (event, ui) {
     //console.log(ui);
+<<<<<<< HEAD
+=======
+    $(this).addClass("dropover")
+    $(".bottom-trash").addClass("bottom-trash-drag");
+>>>>>>> touch-ups
   },
   //triggers when drag ends
   deactivate: function (event, ui) {
     //console.log(ui);
+<<<<<<< HEAD
+=======
+    $(this).removeClass("dropover");
+    $(".bottom-trash").removeClass("bottom-trash-drag");
+>>>>>>> touch-ups
   },
   //triggers when element enters parent '.card'
   over: function (event) {
     //console.log(event);
+<<<<<<< HEAD
+=======
+    $(event.target).addClass("dropover-active");
+    
+>>>>>>> touch-ups
   },
   //triggers when element leaves parent '.card'
   out: function (event) {
     //console.log(event);
+<<<<<<< HEAD
+=======
+    $(event.target).removeClass("dropover-active");
+    
+>>>>>>> touch-ups
   },
   //triggers when element content changes
   update: function () {
@@ -115,9 +135,17 @@ $("#trash").droppable({
   },
   over: function (event, ui) {
     //console.log("over");
+<<<<<<< HEAD
   },
   out: function (event, ui) {
     //console.log("out");
+=======
+    $(".bottom-trash").addClass("bottom-trash-active");
+  },
+  out: function (event, ui) {
+    //console.log("out");
+    $(".bottom-trash").removeClass("bottom-trash-active");
+>>>>>>> touch-ups
   }
 });
 
@@ -134,7 +162,11 @@ $("#task-form-modal").on("shown.bs.modal", function() {
 });
 
 // save button in modal was clicked
+<<<<<<< HEAD
 $("#task-form-modal .btn-primary").click(function() {
+=======
+$("#task-form-modal .btn-save").click(function() {
+>>>>>>> touch-ups
   // get form values
   var taskText = $("#modalTaskDescription").val();
   var taskDate = $("#modalDueDate").val();
@@ -276,7 +308,11 @@ $("#remove-tasks").on("click", function() {
 });
 
 $("#modalDueDate").datepicker({
+<<<<<<< HEAD
   //minDate: 1
+=======
+  minDate: 1
+>>>>>>> touch-ups
 });
 
 var auditTask = function (taskEl) {
@@ -295,8 +331,21 @@ var auditTask = function (taskEl) {
   } else if (Math.abs(moment().diff(time, "days")) <= 2) {
     $(taskEl).addClass("list-group-item-warning");
   }
+<<<<<<< HEAD
 };
 
+=======
+
+  console.log(taskEl);
+};
+
+setInterval(function () {
+  $(".card .list-group-item").each(function (index, el) {
+    auditTask(el);
+  });
+},(1000 * 60) * 30);
+
+>>>>>>> touch-ups
 // load tasks for the first time
 loadTasks();
 
