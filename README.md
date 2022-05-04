@@ -9,5 +9,6 @@
 ## Description
 A kanban style board that lets users keep track of To-Do lists. Uses localStorage for persistence as well as third-party libraries jQuery and Bootstrap.
 
-Built as part of UT Austin Bootcamp
+Built as part of UT Austin Bootcamp 
+
 [Click Here](https://lrodenyoder.github.io/taskmaster-pro/) to go to the webpage
